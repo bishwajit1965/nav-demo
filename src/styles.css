@@ -1,0 +1,38 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.primary-nav {
+  background-color: aliceblue;
+  padding: 16px 32px;
+}
+
+nav a {
+  margin: 0 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.element {
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  background-color: gray;
+  color: white;
+  padding: 10px;
+}
+
+input {
+  margin: 1.5rem 0;
+}
+/* Form style */
+.div-width {
+  width: 35%;
+  margin: auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px 2px #edeff0;
+  background-color: #eeeeee;
+}

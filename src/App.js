@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import UserDetails from "./components/UserDetails";
+import Users from "./components/Users";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
+import "./styles.css";
 
-function App() {
+import "bootstrap/dist/css/bootstrap.min.css";
+import Links from "./components/Links";
+import Single from "./components/Single";
+import Blog from "./Blog";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Links />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="users" element={<Users />}>
+          <Route path=":userId" element={<UserDetails />} />
+        </Route>
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/single" element={<Single />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
